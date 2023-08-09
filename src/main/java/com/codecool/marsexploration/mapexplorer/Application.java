@@ -12,7 +12,6 @@ public class Application {
         Coordinate landingSpot = new Coordinate(6, 6);
         MapLoader mapLoader = new MapLoaderImpl();
         mapLoader.load(mapFile);
-
         // Add your code here
     }
 }

@@ -20,7 +20,7 @@ public class MapLoaderImpl implements MapLoader{
                 representationList.add(line.split(""));
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            return null;
         }
 
         String[][] representation = new String[representationList.size()][];

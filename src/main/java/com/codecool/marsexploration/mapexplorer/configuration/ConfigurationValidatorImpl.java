@@ -10,6 +10,9 @@ import java.util.List;
 
 public class ConfigurationValidatorImpl implements ConfigurationValidator {
     private final MapLoader mapLoader = new MapLoaderImpl();
+//    public ConfigurationValidatorImpl(MapLoader mapLoader) {
+//        this.mapLoader = mapLoader;
+//    }
 
     @Override
     public boolean validateConfiguration(Configuration configuration) {

@@ -13,7 +13,6 @@ public class MapLoaderImplTest {
     void testLoad() {
         MapLoader mapLoader = new MapLoaderImpl();
         Map loadedMap = mapLoader.load(workDir + "/resources/exploration-0.map");
-
         assertNotNull(loadedMap);
     }
 }

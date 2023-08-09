@@ -20,22 +20,18 @@ public class ConfigurationValidatorImpl implements ConfigurationValidator {
         if (map == null || configuration.symbols().isEmpty() || configuration.steps() <= 0) {
             return false;
         }
-
         int dimension = map.getDimension();
         if (!map.isEmpty(configuration.coordinate())) {
             return false;
         }
-
         List<Coordinate> adjacentCoords = getAdjacentCoordinates(configuration.coordinate(), dimension);
         return adjacentCoords.stream().noneMatch(coordinate -> !map.isEmpty(coordinate));
     }
 
     private List<Coordinate> getAdjacentCoordinates(Coordinate coordinate, int dimension) {
         List<Coordinate> adjacentCoordinates = new ArrayList<>();
-
         int x = coordinate.X();
         int y = coordinate.Y();
-
         for (int dx = -1; dx <= 1; dx++) {
             for (int dy = -1; dy <= 1; dy++) {
                 if (dx == 0 && dy == 0) continue;  // Skip the center coordinate
@@ -46,7 +42,6 @@ public class ConfigurationValidatorImpl implements ConfigurationValidator {
                 }
             }
         }
-
         return adjacentCoordinates;
     }
 }

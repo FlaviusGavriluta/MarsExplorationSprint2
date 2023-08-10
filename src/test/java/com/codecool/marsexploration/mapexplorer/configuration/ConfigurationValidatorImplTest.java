@@ -21,12 +21,10 @@ import static org.mockito.Mockito.*;
 public class ConfigurationValidatorImplTest {
 
     private ConfigurationValidatorImpl configurationValidator;
-   // private MapLoader mapLoader = new MapLoaderImpl();
     private String WORK_DIR = "src/main/resources/exploration-0.map";
 
     @BeforeEach
     public void setUp() {
-        //mock(MapLoader.class);
         configurationValidator = new ConfigurationValidatorImpl();
     }
 

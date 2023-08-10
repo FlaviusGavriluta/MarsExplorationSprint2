@@ -12,6 +12,8 @@ import com.codecool.marsexploration.mapexplorer.rover.SpaceShipImpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.codecool.marsexploration.mapexplorer.configuration.ConfigurationValidatorImpl.getAdjacentCoordinates;
+
 public class SimulationExplorer {
     public Configuration configuration;
     public ConfigurationValidator configurationValidator;
@@ -29,7 +31,7 @@ public class SimulationExplorer {
         if (configurationValidator.validateConfiguration(configuration)) {
             List<Coordinate> visitedCoordinates = new ArrayList<>();
             while (simulationContext.steps < simulationContext.stepsTimeout && simulationContext.getOutcome() != ExplorationOutcome.COLONIZABLE) {
-                //List<Coordinate> adjacentCoordinates =
+                List<Coordinate> adjacentCoordinates = getAdjacentCoordinates(simulationContext.rover.getCurrentCoordinate());
                 // get adjacent coordinates, and explore it
                 // move rover on one of the adjacent positions, but not on one of the previous positions
                 // print step

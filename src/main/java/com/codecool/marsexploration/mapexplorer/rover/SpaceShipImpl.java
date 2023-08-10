@@ -9,6 +9,7 @@ import com.codecool.marsexploration.mapexplorer.maploader.model.Map;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,7 @@ public class SpaceShipImpl implements SpaceShip {
 
     @Override
     public Rover placeRover(Configuration configuration) {
-        Collection<Coordinate> resources = new ArrayList<>();
+        java.util.Map<String, Coordinate> resources = new HashMap<>();
         List<Coordinate> adjacentCoordinates = getAdjacentCoordinates(configuration.coordinate());
 
         Map map = mapLoader.load(configuration.path());

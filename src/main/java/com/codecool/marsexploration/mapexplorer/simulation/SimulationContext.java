@@ -7,7 +7,7 @@ import com.codecool.marsexploration.mapexplorer.rover.Rover;
 
 import java.util.List;
 
-public class Simulation {
+public class SimulationContext {
     public int steps;
     public int stepsTimeout;
     public Rover rover;
@@ -16,7 +16,7 @@ public class Simulation {
     public List<String> symbols;
     public ExplorationOutcome outcome;
 
-    public Simulation(int steps, int stepsTimeout, Rover rover, Coordinate spaceshipLocation, Map map, List<String> symbols, ExplorationOutcome outcome) {
+    public SimulationContext(int steps, int stepsTimeout, Rover rover, Coordinate spaceshipLocation, Map map, List<String> symbols, ExplorationOutcome outcome) {
         this.steps = steps;
         this.stepsTimeout = stepsTimeout;
         this.rover = rover;

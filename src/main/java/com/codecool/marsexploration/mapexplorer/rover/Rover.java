@@ -4,12 +4,13 @@ import com.codecool.marsexploration.mapexplorer.maploader.model.Coordinate;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 public class Rover {
   public String id;
   public Coordinate currentCoordinate;
   public int sight;
-  public Collection<Coordinate> resources;
+  public Map<String, Coordinate> resources;
 
 
     public String getId() {
@@ -24,11 +25,11 @@ public class Rover {
         return sight;
     }
 
-    public Collection<Coordinate> getResources() {
+    public Map<String, Coordinate> getResources() {
         return resources;
     }
 
-    public Rover(String id, Coordinate currentCoordinate, int sight, Collection<Coordinate> resources) {
+    public Rover(String id, Coordinate currentCoordinate, int sight, Map<String, Coordinate> resources) {
         this.id = id;
         this.currentCoordinate = currentCoordinate;
         this.sight = sight;
